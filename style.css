@@ -1,0 +1,38 @@
+// Mobile Menu Toggle
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.querySelector('.nav-links');
+
+mobileMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    // Basic toggle logic for mobile visibility
+    if(navLinks.style.display === 'flex') {
+        navLinks.style.display = 'none';
+    } else {
+        navLinks.style.display = 'flex';
+        navLinks.style.flexDirection = 'column';
+        navLinks.style.position = 'absolute';
+        navLinks.style.top = '70px';
+        navLinks.style.left = '0';
+        navLinks.style.width = '100%';
+        navLinks.style.background = '#0a192f';
+        navLinks.style.padding = '20px';
+    }
+});
+
+// Smooth Scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Form Submission (Mockup)
+const leadForm = document.getElementById('leadForm');
+leadForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Thank you! Your request has been sent. Our team will contact you within 2 hours.');
+    leadForm.reset();
+});
