@@ -83,14 +83,13 @@ body {
   justify-content: center;
 }
 
-.card {
-  background: white;
-  padding: 20px;
-  width: 250px;
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
 }
-
 /* WHY */
 .why {
   background: #1e3a5f;
