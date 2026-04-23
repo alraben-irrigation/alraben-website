@@ -96,9 +96,38 @@
 
 <!-- 📍 CONTACT -->
 <section id="contact" class="contact">
-  <h2>Contact Us</h2>
-  <p>Toronto, GTA, Alliston</p>
+  <h2>Get Your Free Quote</h2>
+  <p>Fill out the form and we’ll get back to you quickly.</p>
+
+  <form action="https://formspree.io/f/YOUR-FORM-ID" method="POST" class="contact-form">
+
+    <input type="text" name="name" placeholder="Full Name" required>
+
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+
+    <input type="email" name="email" placeholder="Email Address" required>
+
+    <input type="text" name="address" placeholder="Service Address">
+
+    <select name="service">
+      <option value="">Select Service</option>
+      <option>Sprinkler Installation</option>
+      <option>System Opening ($120)</option>
+      <option>Winterization</option>
+      <option>Repairs</option>
+    </select>
+
+    <textarea name="message" placeholder="Additional Details"></textarea>
+
+    <!-- THIS SENDS TO YOUR EMAIL -->
+    <input type="hidden" name="_replyto" value="Alraben.irrigation@gmail.com">
+
+    <button type="submit" class="btn primary">Request Quote</button>
+
+  </form>
+
   <p>📞 (416) 319-9276</p>
+  <p>📧 Alraben.irrigation@gmail.com</p>
 </section>
 
 <!-- 📱 FLOAT BUTTON -->
