@@ -1,38 +1,164 @@
-// Mobile Menu Toggle
-const mobileMenu = document.getElementById('mobile-menu');
-const navLinks = document.querySelector('.nav-links');
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
 
-mobileMenu.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    // Basic toggle logic for mobile visibility
-    if(navLinks.style.display === 'flex') {
-        navLinks.style.display = 'none';
-    } else {
-        navLinks.style.display = 'flex';
-        navLinks.style.flexDirection = 'column';
-        navLinks.style.position = 'absolute';
-        navLinks.style.top = '70px';
-        navLinks.style.left = '0';
-        navLinks.style.width = '100%';
-        navLinks.style.background = '#0a192f';
-        navLinks.style.padding = '20px';
-    }
-});
+/* TOP BAR */
+.top-bar {
+  background: #1e3a5f;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
 
-// Smooth Scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: white;
+}
 
-// Form Submission (Mockup)
-const leadForm = document.getElementById('leadForm');
-leadForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Thank you! Your request has been sent. Our team will contact you within 2 hours.');
-    leadForm.reset();
-});
+.call-btn {
+  background: #2e7d32;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  background: url('images/hero.jpg') center/cover no-repeat;
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 36px;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 12px 20px;
+  margin: 5px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.primary {
+  background: #2e7d32;
+  color: white;
+}
+
+.secondary {
+  background: white;
+  color: #333;
+}
+
+/* TRUST */
+.trust {
+  background: #f4f4f4;
+  text-align: center;
+  padding: 20px;
+}
+
+/* SERVICES */
+.services {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.service-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* WHY */
+.why {
+  background: #1e3a5f;
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.why ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* GALLERY */
+.gallery {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.images {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.images img {
+  width: 45%;
+  border-radius: 10px;
+}
+
+/* CTA */
+.cta {
+  background: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* CONTACT */
+.contact {
+  padding: 40px;
+  text-align: center;
+}
+
+/* FLOATING BUTTON */
+.floating-call {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #2e7d32;
+  color: white;
+  padding: 15px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .service-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .images {
+    flex-direction: column;
+  }
+
+  .images img {
+    width: 100%;
+  }
+}
